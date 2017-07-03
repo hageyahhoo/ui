@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+  	<title>あれ</title>
+  </head>
+  <body>
+    <h1 style="color:forestgreen">METFLIX</h1>
+    <p>Hello! <span th:text="${username}">John</span></p>
+    <h2>Recommendations</h2>
+    <ul>
+      <li th:each="recommendation : ${recommendations}"
+          th:text="${recommendation.title}" />
+    </ul>
+  </body>
+</html>
