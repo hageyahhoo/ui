@@ -3,7 +3,10 @@ actor User
 participant ui #lime
 participant recommendation #lime
 participant membership #lime
-User -> ui : access
+User -> ui : login
+ui -> membership : login
+note right of ui : call /api/recommendations
+membership -> ui : OK
 ui -> recommendation : find recommendations for this user
 note right of ui : call /api/recommendations
 recommendation -> membership : get member data
