@@ -35,7 +35,19 @@ Run `./mvnw clean build`
 
 
 ## How to run this service as a Docker container
-1. Run `docker build -t ui:0.0.1 .`
-2. Run `docker run -d -p 8080:8080 ui:0.0.1`
-3. Access to `http://localhost:8080/`
-4. Run `docker stop <container_id>`
+
+### 1) Setup
+1. Run `docker network create msa`
+2. Run `docker build -t ui:0.0.1 .`
+
+<br>
+
+### 2) Start
+1. Run `docker run --name ui --network msa -d -p 8080:8080 ui:0.0.1`
+2. Access to `http://localhost:8080/`
+
+<br>
+
+### 3) Stop
+1. Run `docker stop <container_id>`
+2. Run `docker rm ui`
