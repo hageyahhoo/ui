@@ -15,13 +15,18 @@ ui, [recommendations](https://github.com/hageyahhoo/recommendations), and [membe
 
 
 ## How to run this service
-Please run [src/main/java/com/metflix/UiApplication.java](https://github.com/hageyahhoo/ui/blob/master/src/main/java/com/metflix/UiApplication.java).
+
+### 1) CUI
+1. Run `./mvnw clean package` and `target/ui-0.0.1-SNAPSHOT.jar` will be created
+2. Run `java -jar target/ui-0.0.1-SNAPSHOT.jar`
+
+<br>
+
+### 2) IDE (e.g. IntelliJ IDEA)
+Run [src/main/java/com/metflix/UiApplication.java](https://github.com/hageyahhoo/ui/blob/master/src/main/java/com/metflix/UiApplication.java)
 
 <br>
 
 
 ## How to run tests
-Please run the following command.
-```
-./mvnw clean build
-```
+Run `./mvnw clean build`
