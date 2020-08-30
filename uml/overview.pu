@@ -1,0 +1,13 @@
+@startuml
+actor User
+participant ui #lime
+participant recommendation #lime
+participant membership #lime
+User -> ui : access
+ui -> recommendation : find recommendations for this user
+note right of ui : call /api/recommendations
+recommendation -> membership : get member data
+note right of recommendation : call /api/members
+membership -> recommendation : member data
+recommendation -> ui : recommendations for the user
+@enduml
