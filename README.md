@@ -30,3 +30,12 @@ Run [src/main/java/com/metflix/UiApplication.java](https://github.com/hageyahhoo
 
 ## How to run tests
 Run `./mvnw clean build`
+
+<br>
+
+
+## How to run this service as a Docker container
+1. Run `docker build -t ui:0.0.1 .`
+2. Run `docker run -d -p 8080:8080 ui:0.0.1`
+3. Access to `http://localhost:8080/`
+4. Run `docker stop <container_id>`
